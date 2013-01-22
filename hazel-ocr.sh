@@ -7,6 +7,7 @@ MOVE_TO="$HOME/Action/Done"
 
 if (( $+commands[growlnotify] ))
 then
+		# if the growlnotify command is found, we'll use it AND 'logger'
 
 	logit () {
 
@@ -21,6 +22,8 @@ then
 	}
 
 else
+
+		# if growlnotify is not found we'll just use 'logger'
 
 	logit () {
 
